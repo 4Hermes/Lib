@@ -1,5 +1,5 @@
 {
-  "name": "@4hermes/lib-shared",
+  "name": "@hermes/lib-shared",
   "displayName": "Hermes Shared Lib",
   "version": "0.0.0",
   "description": "An NPM package that provides a number of helpful interfaces, utility classes, etc., that are used throughout Project Hermes.",
@@ -21,9 +21,8 @@
     "preversion": "npm run pretty:git",
     "postversion": "if [[ $(git status -s) ]]; then git commit -a -m 'chore(npm): version bump'; fi"
   },
-  "engines": {
-    "node": ">=16.0.0"
-  },
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=16.0.0" },
   "keywords": ["4lch4", "supabase", "openai", "chatgpt", "gpt-3"],
   "repository": {
     "type": "git",
