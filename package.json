@@ -1,5 +1,5 @@
 {
-  "name": "@hermes/lib-shared",
+  "name": "@4hermes/lib-shared",
   "displayName": "Hermes Shared Lib",
   "version": "0.0.0",
   "description": "An NPM package that provides a number of helpful interfaces, utility classes, etc., that are used throughout Project Hermes.",
