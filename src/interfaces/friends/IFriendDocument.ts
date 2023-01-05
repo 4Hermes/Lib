@@ -23,5 +23,3 @@ export interface IFriend extends Document {
   /** The date and time of the last time the Friend was contacted. */
   lastContact?: string
 }
-
-
