@@ -24,10 +24,4 @@ export interface IMongoConfig extends MongoClientOptions {
    * some point in the lifecycle of the application.
    */
   collections: IMongoCollections
-
-  /**
-   * This property is an array of strings that contain the names of the
-   * various collections that are used by the application.
-   */
-  collectionNames: string[]
 }

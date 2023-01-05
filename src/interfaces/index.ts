@@ -1,4 +1,6 @@
-export * from './IAppConfig.js'
+export * from './check-in/index.js'
+export * from './friends/index.js'
 export * from './misc/index.js'
 export * from './mongo/index.js'
 export * from './supabase/index.js'
+export * from './IAppConfig.js'

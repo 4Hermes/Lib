@@ -1,4 +1,4 @@
-import { ISupabaseConfig, IMongoConfig } from './index.js'
+import { IMongoConfig, ISupabaseConfig } from './index.js'
 
 /**
  * This interface defines the object that contains the various configuration
@@ -13,7 +13,7 @@ export interface IAppConfig {
    * _NOT_ make use of Supabase Auth, but rather a simple string comparison,
    * largely for testing purposes.
    */
-  adminApiToken: string
+  apiAdminToken: string
 
   /** The name of the API/App. */
   apiName: string
