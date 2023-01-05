@@ -1,7 +1,7 @@
 {
   "name": "@4hermes/lib-shared",
   "displayName": "Hermes Shared Lib",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An NPM package that provides a number of helpful interfaces, utility classes, etc., that are used throughout Project Hermes.",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
@@ -20,10 +20,22 @@
     "scan": "snyk monitor && snyk code test",
     "prepublish": "tsc"
   },
-  "publishConfig": { "access": "public" },
-  "engines": { "node": ">=16.0.0" },
-  "keywords": ["4lch4", "supabase", "openai", "chatgpt", "gpt-3"],
-  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": [
+    "4lch4",
+    "supabase",
+    "openai",
+    "chatgpt",
+    "gpt-3"
+  ],
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "ssh://git@git.4lch4.io:22022/4lch4/Lib-Shared.git"
