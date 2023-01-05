@@ -19,22 +19,10 @@
     "test": "echo 'There are currently no tests available.'",
     "scan": "snyk monitor && snyk code test"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "engines": {
-    "node": ">=16.0.0"
-  },
-  "keywords": [
-    "4lch4",
-    "supabase",
-    "openai",
-    "chatgpt",
-    "gpt-3"
-  ],
-  "files": [
-    "dist"
-  ],
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=16.0.0" },
+  "keywords": ["4lch4", "supabase", "openai", "chatgpt", "gpt-3"],
+  "files": ["dist"],
   "repository": {
     "type": "git",
     "url": "ssh://git@git.4lch4.io:22022/4lch4/Lib-Shared.git"
