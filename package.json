@@ -21,19 +21,9 @@
     "preversion": "npm run pretty:git",
     "postversion": "if [[ $(git status -s) ]]; then git commit -a -m 'chore(npm): version bump'; fi"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "engines": {
-    "node": ">=16.0.0"
-  },
-  "keywords": [
-    "4lch4",
-    "supabase",
-    "openai",
-    "chatgpt",
-    "gpt-3"
-  ],
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=16.0.0" },
+  "keywords": ["4lch4", "supabase", "openai", "chatgpt", "gpt-3"],
   "repository": {
     "type": "git",
     "url": "ssh://git@git.4lch4.io:22022/4lch4/Lib-Shared.git"
