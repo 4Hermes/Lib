@@ -43,5 +43,18 @@
   "bugs": {
     "email": "bugs@4lch4.email",
     "url": "https://git.4lch4.io/4lch4/Lib-Shared/issues"
+  },
+  "dependencies": {
+    "@4lch4/logger": "^1.11.0",
+    "dayjs": "^1.11.7",
+    "fs-extra": "^11.1.0",
+    "nanoid": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "^18.11.18",
+    "prettier": "^2.8.1",
+    "snyk": "^1.1081.0",
+    "typescript": "^4.9.4"
   }
 }
