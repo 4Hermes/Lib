@@ -1,5 +1,5 @@
 {
-  "name": "@4hermes/lib-shared",
+  "name": "@4lch4/hermes-lib",
   "displayName": "Hermes Shared Lib",
   "version": "0.0.3",
   "description": "An NPM package that provides a number of helpful interfaces, utility classes, etc., that are used throughout Project Hermes.",
@@ -8,7 +8,7 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "license": "GPL-3.0-only",
-  "homepage": "https://git.4lch4.io/4lch4/Lib-Shared",
+  "homepage": "https://github.com/4Hermes/Lib",
   "scripts": {
     "start": "node dist/index.js",
     "dplr:start": "doppler run -p $CRONICLE_PROJECT --config $CRONICLE_CONFIG --command='DEBUG=$DEBUG node ./dist/index.js'",
@@ -30,7 +30,7 @@
   "files": ["dist"],
   "repository": {
     "type": "git",
-    "url": "ssh://git@git.4lch4.io:22022/4lch4/Lib-Shared.git"
+    "url": "git@github.com:4Hermes/Lib.git"
   },
   "author": {
     "name": "4lch4",
@@ -39,7 +39,7 @@
   },
   "bugs": {
     "email": "bugs@4lch4.email",
-    "url": "https://git.4lch4.io/4lch4/Lib-Shared/issues"
+    "url": "https://github.com/4Hermes/Lib/issues"
   },
   "dependencies": {
     "@4lch4/logger": "^1.11.0",
