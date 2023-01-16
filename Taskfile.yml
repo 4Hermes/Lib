@@ -22,6 +22,11 @@ tasks:
       - echo "DOCKER_IMAGE_NAME = {{ .DOCKER_IMAGE_NAME }}"
       - echo "----------------------------------------------"
 
+  git:push:
+    aliases: [gp]
+    desc: Pushes any staged commits to the remote repository.
+    cmds: [git push --all --tags]
+
   pretty:
     aliases: [p, format, fmt]
     silent: false
