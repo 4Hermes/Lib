@@ -1,9 +1,4 @@
-import {
-  DEFAULT_MONGO_CONFIG,
-  DEFAULT_SUPABASE_CONFIG,
-  IAPIConfig,
-  IAppConfig,
-} from '../../index.js'
+import { DEFAULT_SUPABASE_CONFIG, IAPIConfig, IAppConfig } from '../../index.js'
 
 /** The default prefix to use for API routes. */
 export const DEFAULT_API_PREFIX = '/api/v1'
@@ -47,6 +42,5 @@ export const DEFAULT_API_CONFIG: IAPIConfig = {
  */
 export const DEFAULT_APP_CONFIG: IAppConfig = {
   apiConfig: DEFAULT_API_CONFIG,
-  mongoConfig: DEFAULT_MONGO_CONFIG,
   supabaseConfig: DEFAULT_SUPABASE_CONFIG,
 }

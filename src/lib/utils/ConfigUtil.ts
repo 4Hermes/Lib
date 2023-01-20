@@ -2,11 +2,9 @@ import {
   BaseUtil,
   DEFAULT_API_CONFIG,
   DEFAULT_APP_CONFIG,
-  DEFAULT_MONGO_CONFIG,
   DEFAULT_SUPABASE_CONFIG,
   IAPIConfig,
   IAppConfig,
-  IMongoConfig,
   IOUtil,
   IPackageJSON,
   ISupabaseConfig,
@@ -41,9 +39,8 @@ export class ConfigUtil extends BaseUtil {
   public async getAppConfig(): Promise<IAppConfig> {
     const apiConfig = await this.getAPIConfig()
     const supabaseConfig = this.getSupabaseConfig()
-    const mongoConfig = this.getMongoConfig()
 
-    return { ...DEFAULT_APP_CONFIG, apiConfig, supabaseConfig, mongoConfig }
+    return { ...DEFAULT_APP_CONFIG, apiConfig, supabaseConfig }
   }
 
   /**
@@ -83,60 +80,6 @@ export class ConfigUtil extends BaseUtil {
     return {
       url: process.env.SUPABASE_URL || DEFAULT_SUPABASE_CONFIG.url,
       apiKey: process.env.SUPABASE_API_KEY || DEFAULT_SUPABASE_CONFIG.apiKey,
-    }
-  }
-
-  /**
-   * Composes/creates an object of type {@link IMongoConfig} that contains the
-   * configuration options for MongoDB. It will attempt to read the values from
-   * the environment variables, however if they are not set, it will use the
-   * default values that are stored at the following path:
-   *
-   * `Lib-Shared/src/lib/constants/MongoDB.ts`
-   *
-   * @returns An object containing the configuration options for MongoDB.
-   *
-   * @see {@link IMongoConfig}
-   * @see {@link DEFAULT_MONGO_CONFIG}
-   */
-  public getMongoConfig(): IMongoConfig {
-    return {
-      connectionString:
-        process.env.MONGO_CONNECTION_STRING || DEFAULT_MONGO_CONFIG.connectionString,
-      collections: {
-        users: {
-          dbName:
-            process.env.MONGO_USERS_COLLECTION_NAME ||
-            DEFAULT_MONGO_CONFIG.collections.users.collectionName,
-          collectionName:
-            process.env.MONGO_USERS_COLLECTION_DB_NAME ||
-            DEFAULT_MONGO_CONFIG.collections.users.dbName,
-        },
-        friends: {
-          dbName:
-            process.env.MONGO_FRIENDS_COLLECTION_NAME ||
-            DEFAULT_MONGO_CONFIG.collections.friends.collectionName,
-          collectionName:
-            process.env.MONGO_FRIENDS_COLLECTION_DB_NAME ||
-            DEFAULT_MONGO_CONFIG.collections.friends.dbName,
-        },
-        config: {
-          dbName:
-            process.env.MONGO_CONFIG_COLLECTION_NAME ||
-            DEFAULT_MONGO_CONFIG.collections.config.collectionName,
-          collectionName:
-            process.env.MONGO_CONFIG_COLLECTION_DB_NAME ||
-            DEFAULT_MONGO_CONFIG.collections.config.dbName,
-        },
-        checkIns: {
-          dbName:
-            process.env.MONGO_CHECK_INS_COLLECTION_NAME ||
-            DEFAULT_MONGO_CONFIG.collections.checkIns.collectionName,
-          collectionName:
-            process.env.MONGO_CHECK_INS_COLLECTION_DB_NAME ||
-            DEFAULT_MONGO_CONFIG.collections.checkIns.dbName,
-        },
-      },
     }
   }
 }

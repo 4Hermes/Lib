@@ -1,1 +1,1 @@
-export * from './IFriendDocument.js'
+export * from './IFriendRow.js'

@@ -1,11 +1,9 @@
-import { Document, ObjectId } from 'mongodb'
-
 /**
  * This interface represents a Friend object in the `props` DB, under the
  * `friends` collection of my MongoDB Cluster.
  */
-export interface IFriend extends Document {
-  _id: ObjectId
+export interface IFriend {
+  _id: string
 
   /** The name of the Friend object. */
   name: string
