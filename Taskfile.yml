@@ -2,6 +2,9 @@ version: 3
 
 env:
   DEBUG: true
+  CSMITH_ORG: 4lch4-industries
+  CSMITH_CRED_PATH: ~/.cloudsmith/credentials.ini
+  CSMITH_CONF_PATH: ~/.cloudsmith/config.ini
 
 tasks:
   git:push:
@@ -13,22 +16,27 @@ tasks:
 
   pretty:
     aliases: [p, format, fmt]
-    silent: false
     desc: Uses the Prettier CLI tool to format the codebase.
     cmds: ['prettier --write .']
 
   lint:
     aliases: [l]
-    silent: false
     desc: Uses the Prettier CLI tool to lint the codebase.
     cmds: [prettier -c .]
 
   clean:
     aliases: [c]
-    silent: false
     desc: Deletes local build/package directories.
     cmds: ['rm -rf node_modules pnpm-lock.yaml dist']
 
   build:
     aliases: [b]
-    cmds: ['npm i', 'npm run build']
+    cmds: ['pnpm i', 'npm run build']
+
+  cl:push:
+    aliases: [clp]
+    desc: Builds the code into a tarball and pushes it to Cloudsmith.
+    cmds:
+      - task: build
+      - npm pack
+      - cloudsmith push npm -C {{ .CSMITH_CONF_PATH }} --credentials-file {{ .CSMITH_CRED_PATH }} {{ .CSMITH_ORG }}/hermes ./4lch4-hermes-lib-*.tgz
