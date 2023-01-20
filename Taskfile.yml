@@ -7,7 +7,9 @@ tasks:
   git:push:
     aliases: [gp]
     desc: Pushes any staged commits to the remote repository.
-    cmds: [git push --all --tags]
+    cmds:
+      - git push --all
+      - git push --tags
 
   pretty:
     aliases: [p, format, fmt]
