@@ -1,4 +1,4 @@
-import { IAPIConfig, IMongoConfig, ISupabaseConfig } from './index.js'
+import { IAPIConfig, ISupabaseConfig } from './index.js'
 
 /**
  * This interface defines the object that contains the various configuration
@@ -10,7 +10,4 @@ export interface IAppConfig {
 
   /** The configuration settings/information for Supabase. */
   supabaseConfig?: ISupabaseConfig
-
-  /** The configuration settings/information for the MongoDB database. */
-  mongoConfig?: IMongoConfig
 }
