@@ -10,8 +10,6 @@
   "license": "GPL-3.0-only",
   "homepage": "https://github.com/4Hermes/Lib",
   "scripts": {
-    "start": "node dist/index.js",
-    "dplr:start": "doppler run -p $CRONICLE_PROJECT --config $CRONICLE_CONFIG --command='DEBUG=$DEBUG node ./dist/index.js'",
     "build": "tsc",
     "pretty": "prettier --write .",
     "pretty:git": "prettier --write . && if [[ $(git status -s) ]]; then git commit -a -m 'chore(pretty): project prettied'; fi",
@@ -26,16 +24,8 @@
   "engines": {
     "node": ">=16.0.0"
   },
-  "keywords": [
-    "4lch4",
-    "supabase",
-    "openai",
-    "chatgpt",
-    "gpt-3"
-  ],
-  "files": [
-    "dist"
-  ],
+  "keywords": ["4lch4", "supabase", "openai", "chatgpt", "gpt-3"],
+  "files": ["dist"],
   "repository": {
     "type": "git",
     "url": "git@github.com:4Hermes/Lib.git"
@@ -60,7 +50,7 @@
     "nanoid": "^4.0.0"
   },
   "devDependencies": {
-    "@types/fs-extra": "^9.0.13",
+    "@types/fs-extra": "^11.0.1",
     "@types/koa": "^2.13.5",
     "@types/koa__router": "^12.0.0",
     "@types/node": "^18.11.18",
