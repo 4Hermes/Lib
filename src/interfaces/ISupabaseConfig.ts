@@ -1,5 +1,5 @@
 export interface ISupabaseConfig {
-  apiUrl: string
+  url: string
 
-  apiToken: string
+  apiKey: string
 }
