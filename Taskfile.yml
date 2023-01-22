@@ -2,9 +2,8 @@ version: 3
 
 env:
   DEBUG: true
-  CSMITH_ORG: 4lch4-industries
-  CSMITH_CRED_PATH: ~/.cloudsmith/credentials.ini
-  CSMITH_CONF_PATH: ~/.cloudsmith/config.ini
+  SUPABASE_EXPORT_PATH: ./src/interfaces/supabase.ts
+  SUPABASE_PROJECT_ID: djgqoashxzucwkxkjcep
 
 tasks:
   git:push:
@@ -31,7 +30,11 @@ tasks:
 
   build:
     aliases: [b]
-    cmds: ['pnpm i', 'npm run build']
+    cmds: ['pnpm i', 'pnpm run build']
+
+  build:supabase:
+    cmds:
+      - npx supabase gen types typescript --project-id {{ .SUPABASE_PROJECT_ID }} --schema public > {{ .SUPABASE_EXPORT_PATH }}
 
   cl:push:
     aliases: [clp]
